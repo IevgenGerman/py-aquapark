@@ -18,7 +18,7 @@ class IntegerRange:
     def __get__(
             self,
             instance: None | object,
-            owner: type) -> None:
+            owner: type) -> int:
         return getattr(instance, self.protected_name)
 
     def __set__(
@@ -75,7 +75,8 @@ class Slide:
             self,
             name: str,
             limitation_class:
-            ChildrenSlideLimitationValidator | AdultSlideLimitationValidator) \
+            ChildrenSlideLimitationValidator
+            | AdultSlideLimitationValidator) \
             -> None:
         self.name = name
         self.limitation_class = limitation_class
