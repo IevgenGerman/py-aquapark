@@ -76,8 +76,8 @@ class Slide:
             name: str,
             limitation_class:
             ChildrenSlideLimitationValidator
-            | AdultSlideLimitationValidator) \
-            -> None:
+            | AdultSlideLimitationValidator
+    ) -> None:
         self.name = name
         self.limitation_class = limitation_class
 
